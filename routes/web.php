@@ -19,10 +19,6 @@ Route::get('/contact', function(){
 
 Route::get('/projects', function() {
     $projects = Project::all();
-    $projects = array_map(function ($project) {
-        $project['date'] = new DateTime($project['date']);
-        return $project;
-    }, $projects);
     return view('projects', ['projects'=>$projects]);
 });
 Route::get('/{id}/project', function($id) {
