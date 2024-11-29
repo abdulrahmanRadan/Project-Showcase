@@ -21,7 +21,9 @@ Route::get('/projects', function() {
     $projects = Project::all();
     return view('projects', ['projects'=>$projects]);
 });
+
 Route::get('/{id}/project', function($id) {
     $project = Project::find($id);
     return view('project', ['project'=>$project]);
 });
+
