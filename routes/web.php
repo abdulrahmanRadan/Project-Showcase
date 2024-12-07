@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Job;
 use Illuminate\Support\Facades\Route;
 use App\Models\Project;
 
@@ -9,12 +10,14 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/about', function () {
-    return view('about');
+Route::get('/{id}/job', function ($id) {
+    $job = Job::find($id);
+    return view('job', ['job'=>$job]);
 });
 
-Route::get('/contact', function(){
-    return view('contact');
+Route::get('/jobs', function(){
+    $jobs = Job::all();
+    return view('jobs', ['jobs' =>$jobs]);
 });
 
 Route::get('/projects', function() {
@@ -26,4 +29,3 @@ Route::get('/{id}/project', function($id) {
     $project = Project::find($id);
     return view('project', ['project'=>$project]);
 });
-

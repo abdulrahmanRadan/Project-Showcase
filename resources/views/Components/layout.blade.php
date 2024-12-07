@@ -25,11 +25,8 @@
                                 <x-nav-link href="/" :active="request()->is('/')">
                                     Home
                                 </x-nav-link>
-                                <x-nav-link href="/about" :active="request()->is('about')">
-                                    About
-                                </x-nav-link>
-                                <x-nav-link href="/contact" :active="request()->is('contact')">
-                                    Contact
+                                <x-nav-link href="/jobs" :active="request()->is('jobs')">
+                                    Jobs
                                 </x-nav-link>
                                 <x-nav-link href="/projects" :active="request()->is('projects')">
                                     Projects
@@ -97,11 +94,8 @@
                     <x-nav-link href="/" :active="request()->is('/')" class="block  text-white">
                         Home
                     </x-nav-link>
-                    <x-nav-link href="/about" :active="request()->is('/about')" class="block  text-white">
-                        About
-                    </x-nav-link>
-                    <x-nav-link href="/contact" :active="request()->is('/contact')" class="block   text-white">
-                        Contact
+                    <x-nav-link href="/jobs" :active="request()->is('/jobs')" class="block   text-white">
+                        Jobs
                     </x-nav-link>
                     <x-nav-link href="/projects" :active="request()->is('/projects')" class="block   text-white">
                         Projects
